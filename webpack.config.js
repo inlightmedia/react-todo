@@ -25,8 +25,11 @@ module.exports = {
 	// Resolve.alias sets up aliases which make require module paths easier ex. require('Main') rather than require('/app/this/that/Main.jsx')
 	resolve: {
         root: __dirname,
+		modulesDirectories: [
+			'node_modules', './app/components/'
+		],
         alias: {
-			applicationStyles: 'app/styles/styles.scss'			
+			applicationStyles: 'app/styles/styles.scss'
         },
         extensions: ['', '.js', '.jsx']
     },
